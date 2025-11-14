@@ -1,0 +1,33 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+header {
+  padding: 2rem;
+  background: #111;
+}
+
+.hero {
+  padding: 5rem 2rem;
+  background: linear-gradient(145deg, #000, #222);
+}
+
+.btn {
+  background: gold;
+  color: black;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  background: #111;
+}
