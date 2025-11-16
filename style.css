@@ -1,9 +1,6 @@
-/* Global Styling */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: gold;
+/* GLOBAL GOLD TEXT */
+body, h1, h2, h3, h4, h5, h6, p, a, li, span {
+    color: #d4af37 !important;
 }
 
 .header {
