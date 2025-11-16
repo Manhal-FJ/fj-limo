@@ -6,69 +6,48 @@ body {
     color: gold;
 }
 
-header {
+.header {
+    width: 100%;
+    background-color: #000;
+    border-bottom: 2px solid #b8860b;
+    padding: 15px 0;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: #000;
-    border-bottom: 1px solid gold;
 }
 
 .logo {
-    height: 150px;
+    width: 120px;
 }
 
-nav a {
-    margin-left: 30px;
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: #d4af37;
     text-decoration: none;
     font-size: 18px;
-    color: gold;
-    transition: 0.3s;
+    font-weight: 500;
 }
 
-nav a:hover {
-    color: white;
+.nav-link:hover {
+    text-decoration: underline;
 }
 
 .book-btn {
-    padding: 10px 18px;
-    border: 1px solid gold;
-    border-radius: 5px;
+    border: 1px solid #d4af37;
+    padding: 5px 12px;
+    border-radius: 6px;
 }
 
-.book-btn:hover {
-    background-color: gold;
-    color: black;
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 140px 20px;
-    background: linear-gradient(to bottom, #000, #111);
-}
-
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.hero-btn {
-    margin-top: 20px;
-    display: inline-block;
-    background-color: gold;
-    color: black;
-    padding: 14px 28px;
-    border-radius: 5px;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.hero-btn:hover {
-    background-color: white;
-    color: black;
-}
 
 /* Sections */
 section {
@@ -96,4 +75,37 @@ footer {
     background: linear-gradient(90deg, #b8860b, #d4af37, #f5d76e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+
+    .nav {
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        background: #000;
+        border: 1px solid #d4af37;
+        padding: 15px;
+        border-radius: 8px;
+        flex-direction: column;
+        width: 150px;
+        z-index: 1000;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        color: #d4af37;
+        cursor: pointer;
+    }
+}
+
+/* Desktop hides menu toggle */
+.menu-toggle {
+    display: none;
 }
