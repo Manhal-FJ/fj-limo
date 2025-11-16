@@ -1,156 +1,183 @@
-/* ============================
-   GLOBAL COLORS & BASE STYLES
-   ============================ */
+/* ===============================
+   GLOBAL STYLES (GOLD THEME)
+================================ */
 
 body {
     margin: 0;
-    padding: 0;
-    background-color: #000000; /* Full black background */
-    font-family: Arial, Helvetica, sans-serif;
-    color: #d4af37; /* Default gold text */
+    font-family: "Georgia", serif;
+    background-color: #000;
+    color: #d4af37; /* Gold text */
+    text-align: center;
 }
 
-/* Gold color for all text */
-h1, h2, h3, h4, h5, h6,
-p, a, li, span, div, strong {
-    color: #d4af37 !important;
+/* GOLD TEXT CLASS */
+.gold-text {
+    background: linear-gradient(90deg, #b8860b, #d4af37, #f5d76e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* Remove default link blue color */
-a {
-    text-decoration: none;
-    color: #d4af37;
+/* ===============================
+   HEADER
+================================ */
+
+.header {
+    background-color: #000;
+    border-bottom: 2px solid #d4af37;
+    padding: 15px 20px;
 }
 
-/* ============================
-   HEADER & NAVIGATION
-   ============================ */
-
-header {
-    width: 100%;
-    background-color: #000000;
-    padding: 20px 0;
-    border-bottom: 1px solid #d4af37; /* Gold line under header */
+.header-container {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Logo */
-.logo img {
-    width: 150px;
-    height: auto;
-    margin-left: 20px;
+/* LOGO */
+.logo {
+    width: 120px;
 }
 
-/* Navigation menu */
-nav ul {
-    list-style: none;
+/* NAVIGATION */
+.nav {
     display: flex;
-    gap: 30px;
-    margin-right: 40px;
+    gap: 25px;
 }
 
-nav ul li a {
-    font-size: 18px;
+.nav-link {
     color: #d4af37;
-}
-
-nav ul li a:hover {
-    border-bottom: 1px solid #d4af37;
-}
-
-/* Book Now button */
-.book-btn {
-    padding: 8px 15px;
-    border: 1px solid #d4af37;
-    color: #d4af37;
-    border-radius: 5px;
-}
-
-/* ============================
-   HERO / MAIN TITLE SECTION
-   ============================ */
-
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.hero p {
+    text-decoration: none;
     font-size: 18px;
-    margin-bottom: 10px;
-}
-
-/* Call button */
-.call-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 20px;
-    background-color: #d4af37;
-    color: #000000 !important; /* Black text inside button */
-    border-radius: 6px;
     font-weight: bold;
 }
 
-/* ============================
-   SERVICES SECTION
-   ============================ */
-
-.services {
-    text-align: center;
-    padding: 60px 20px;
+.nav-link:hover {
+    color: #f5d76e;
 }
 
-.services h2 {
-    font-size: 30px;
-    margin-bottom: 25px;
+/* BOOK NOW BUTTON */
+.book-btn {
+    padding: 8px 15px;
+    border: 2px solid #d4af37;
+    border-radius: 6px;
 }
 
-.services li {
-    list-style: none;
+.book-btn:hover {
+    background-color: #d4af37;
+    color: #000;
+}
+
+/* MOBILE MENU BUTTON */
+.menu-toggle {
+    display: none;
+    color: #d4af37;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+
+.hero {
+    padding: 110px 20px 80px;
+    border-bottom: 2px solid #d4af37;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #d4af37;
+}
+
+.hero p {
+    margin-top: -10px;
     font-size: 20px;
-    margin: 5px 0;
 }
 
-/* ============================
+.hero-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 25px;
+    background-color: #d4af37;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    background-color: #f5d76e;
+}
+
+/* ===============================
+   SECTIONS (Services, Fleet)
+================================ */
+
+section {
+    padding: 70px 20px;
+}
+
+h2 {
+    color: #d4af37;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+/* ===============================
+   CONTACT SECTION
+================================ */
+
+.contact p {
+    font-size: 20px;
+}
+
+/* ===============================
    FOOTER
-   ============================ */
+================================ */
 
 footer {
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 50px;
-    border-top: 1px solid #d4af37;
+    padding: 20px;
+    background: #000;
+    border-top: 2px solid #d4af37;
     font-size: 16px;
 }
 
-/* ============================
-   MOBILE RESPONSIVE FIXES
-   ============================ */
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
 
 @media (max-width: 768px) {
 
-    nav ul {
+    .nav {
+        display: none;
         flex-direction: column;
-        text-align: right;
-        padding-right: 20px;
+        background-color: #000;
+        padding: 20px;
+        border-top: 2px solid #d4af37;
     }
 
-    .logo img {
-        width: 130px;
+    .nav.show {
+        display: flex;
     }
 
-    .hero h1 {
-        font-size: 28px;
+    .menu-toggle {
+        display: block;
     }
 
-    .services li {
-        font-size: 18px;
+    .logo {
+        width: 95px;
     }
 }
