@@ -1,135 +1,156 @@
-/* GLOBAL GOLD COLOR FOR ALL TEXT & BORDERS */
-body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, label, strong, em {
+/* ============================
+   GLOBAL COLORS & BASE STYLES
+   ============================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Full black background */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #d4af37; /* Default gold text */
+}
+
+/* Gold color for all text */
+h1, h2, h3, h4, h5, h6,
+p, a, li, span, div, strong {
     color: #d4af37 !important;
 }
 
-/* Make all horizontal lines gold */
-hr, .line, .divider {
-    border-color: #d4af37 !important;
-    background-color: #d4af37 !important;
+/* Remove default link blue color */
+a {
+    text-decoration: none;
+    color: #d4af37;
 }
 
-/* Menu items gold */
-nav a {
-    color: #d4af37 !important;
-}
+/* ============================
+   HEADER & NAVIGATION
+   ============================ */
 
-/* Buttons (if you want gold text) */
-button, .btn {
-    color: #d4af37 !important;
-    border: 1px solid #d4af37 !important;
-}
-
-/* If any section had black text, override it */
-* {
-    color: #d4af37 !important;
-}
-
-/* GLOBAL GOLD TEXT */
-body, h1, h2, h3, h4, h5, h6, p, a, li, span {
-    color: #d4af37 !important;
-}
-
-.header {
+header {
     width: 100%;
-    background-color: #000;
-    border-bottom: 2px solid #b8860b;
-    padding: 15px 0;
-}
-
-.header-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    background-color: #000000;
+    padding: 20px 0;
+    border-bottom: 1px solid #d4af37; /* Gold line under header */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    width: 120px;
+/* Logo */
+.logo img {
+    width: 150px;
+    height: auto;
+    margin-left: 20px;
 }
 
-.nav {
-    display: flex;
-    gap: 25px;
-}
-
-.nav-link {
-    color: #d4af37;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.nav-link:hover {
-    text-decoration: underline;
-}
-
-.book-btn {
-    border: 1px solid #d4af37;
-    padding: 5px 12px;
-    border-radius: 6px;
-}
-
-
-/* Sections */
-section {
-    padding: 80px 40px;
-    text-align: center;
-}
-
-.services ul {
+/* Navigation menu */
+nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
+    gap: 30px;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    font-size: 18px;
+    color: #d4af37;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid #d4af37;
+}
+
+/* Book Now button */
+.book-btn {
+    padding: 8px 15px;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    border-radius: 5px;
+}
+
+/* ============================
+   HERO / MAIN TITLE SECTION
+   ============================ */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Call button */
+.call-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #d4af37;
+    color: #000000 !important; /* Black text inside button */
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* ============================
+   SERVICES SECTION
+   ============================ */
+
+.services {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.services h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
 }
 
 .services li {
-    margin: 10px 0;
+    list-style: none;
     font-size: 20px;
+    margin: 5px 0;
 }
+
+/* ============================
+   FOOTER
+   ============================ */
 
 footer {
-    border-top: 1px solid gold;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
     margin-top: 50px;
+    border-top: 1px solid #d4af37;
+    font-size: 16px;
 }
-.gold-text {
-    background: linear-gradient(90deg, #b8860b, #d4af37, #f5d76e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-/* MOBILE STYLES */
+
+/* ============================
+   MOBILE RESPONSIVE FIXES
+   ============================ */
+
 @media (max-width: 768px) {
 
-    .nav {
-        display: none;
-        position: absolute;
-        right: 20px;
-        top: 70px;
-        background: #000;
-        border: 1px solid #d4af37;
-        padding: 15px;
-        border-radius: 8px;
+    nav ul {
         flex-direction: column;
-        width: 150px;
-        z-index: 1000;
+        text-align: right;
+        padding-right: 20px;
     }
 
-    .nav.show {
-        display: flex;
+    .logo img {
+        width: 130px;
     }
 
-    .menu-toggle {
-        display: block;
+    .hero h1 {
         font-size: 28px;
-        color: #d4af37;
-        cursor: pointer;
     }
-}
 
-/* Desktop hides menu toggle */
-.menu-toggle {
-    display: none;
+    .services li {
+        font-size: 18px;
+    }
 }
