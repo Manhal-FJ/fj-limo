@@ -1,3 +1,30 @@
+/* GLOBAL GOLD COLOR FOR ALL TEXT & BORDERS */
+body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, label, strong, em {
+    color: #d4af37 !important;
+}
+
+/* Make all horizontal lines gold */
+hr, .line, .divider {
+    border-color: #d4af37 !important;
+    background-color: #d4af37 !important;
+}
+
+/* Menu items gold */
+nav a {
+    color: #d4af37 !important;
+}
+
+/* Buttons (if you want gold text) */
+button, .btn {
+    color: #d4af37 !important;
+    border: 1px solid #d4af37 !important;
+}
+
+/* If any section had black text, override it */
+* {
+    color: #d4af37 !important;
+}
+
 /* GLOBAL GOLD TEXT */
 body, h1, h2, h3, h4, h5, h6, p, a, li, span {
     color: #d4af37 !important;
