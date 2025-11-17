@@ -1,172 +1,75 @@
-/* ===============================
-   GLOBAL STYLES (GOLD THEME)
-================================ */
-
+/* GLOBAL */
 body {
     margin: 0;
-    font-family: "Georgia", serif;
-    background-color: #000;
-    color: #d4af37; /* Gold text */
+    font-family: Arial, sans-serif;
+    background: black;
+    color: #d4af37;
     text-align: center;
+    scroll-behavior: smooth;
 }
 
-/* GOLD TEXT CLASS */
-.gold-text {
+.gold-gradient {
     background: linear-gradient(90deg, #b8860b, #d4af37, #f5d76e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* ===============================
-   HEADER
-================================ */
-
+/* HEADER */
 .header {
-    background-color: #000;
-    border-bottom: 2px solid #d4af37;
+    background: black;
     padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #d4af37;
 }
 
 .header-container {
-    max-width: 1200px;
-    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* LOGO */
 .logo {
-    width: 120px;
+    height: 70px;
 }
 
-/* NAVIGATION */
 .nav {
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
 .nav-link {
+    cursor: pointer;
     color: #d4af37;
-    text-decoration: none;
-    font-size: 18px;
     font-weight: bold;
 }
 
 .nav-link:hover {
-    color: #f5d76e;
+    text-decoration: underline;
 }
 
-/* BOOK NOW BUTTON */
 .book-btn {
-    padding: 8px 15px;
-    border: 2px solid #d4af37;
-    border-radius: 6px;
+    border: 1px solid #d4af37;
+    padding: 6px 12px;
+    border-radius: 5px;
 }
 
-.book-btn:hover {
-    background-color: #d4af37;
-    color: #000;
-}
-
-/* MOBILE MENU BUTTON */
+/* MOBILE MENU */
 .menu-toggle {
     display: none;
-    color: #d4af37;
-    font-size: 34px;
-    cursor: pointer;
-}
-
-/* ===============================
-   HERO SECTION
-================================ */
-
-.hero {
-    padding: 110px 20px 80px;
-    border-bottom: 2px solid #d4af37;
-}
-
-.hero h1 {
-    font-size: 42px;
+    font-size: 26px;
     color: #d4af37;
 }
-
-.hero p {
-    margin-top: -10px;
-    font-size: 20px;
-}
-
-.hero-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 15px 25px;
-    background-color: #d4af37;
-    color: #000;
-    text-decoration: none;
-    font-size: 20px;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-.hero-btn:hover {
-    background-color: #f5d76e;
-}
-
-/* ===============================
-   SECTIONS (Services, Fleet)
-================================ */
-
-section {
-    padding: 70px 20px;
-}
-
-h2 {
-    color: #d4af37;
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 10px 0;
-    font-size: 20px;
-}
-
-/* ===============================
-   CONTACT SECTION
-================================ */
-
-.contact p {
-    font-size: 20px;
-}
-
-/* ===============================
-   FOOTER
-================================ */
-
-footer {
-    padding: 20px;
-    background: #000;
-    border-top: 2px solid #d4af37;
-    font-size: 16px;
-}
-
-/* ===============================
-   MOBILE RESPONSIVE
-================================ */
 
 @media (max-width: 768px) {
-
     .nav {
         display: none;
         flex-direction: column;
-        background-color: #000;
+        background: black;
         padding: 20px;
-        border-top: 2px solid #d4af37;
+        text-align: right;
     }
 
     .nav.show {
@@ -176,8 +79,79 @@ footer {
     .menu-toggle {
         display: block;
     }
+}
 
-    .logo {
-        width: 95px;
-    }
+/* HERO WITH BACKGROUND SUV */
+.hero {
+    height: 90vh;
+    background: url('suv.jpg') no-repeat center/cover;
+    position: relative;
+    padding-top: 120px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 80px;
+}
+
+.hero-btn {
+    background: #d4af37;
+    color: black;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero-btn:hover {
+    background: #f5d76e;
+}
+
+/* SECTIONS */
+section {
+    padding: 70px 20px;
+    color: #d4af37;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+    line-height: 2.2;
+}
+
+/* WHATSAPP FLOATING BUTTON */
+.whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 30px;
+    padding: 12px 16px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 0 10px black;
+}
+
+/* FADE-IN ANIMATION */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.8s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
