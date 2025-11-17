@@ -9,17 +9,12 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="header">
     <div class="header-container">
-
-        <!-- LOGO -->
         <img src="logo.jpg" alt="FJ Limo Logo" class="logo">
-
-        <!-- MOBILE MENU BUTTON -->
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-        <!-- NAV MENU -->
         <nav id="navMenu" class="nav">
             <a onclick="scrollToSection('home')" class="nav-link">Home</a>
             <a onclick="scrollToSection('services')" class="nav-link">Services</a>
@@ -27,23 +22,26 @@
             <a onclick="scrollToSection('contact')" class="nav-link">Contact</a>
             <a onclick="scrollToSection('book')" class="nav-link book-btn">Book Now</a>
         </nav>
-
     </div>
 </header>
 
 
-<!-- ================= HERO SECTION ================= -->
-<section id="home" class="hero">
-    <h1 class="gold-text">Luxury Black SUV Transportation</h1>
-    <p class="gold-text">Houston & Surrounding Areas</p>
+<!-- HERO WITH BACKGROUND SUV -->
+<section id="home" class="hero fade-in">
+    <div class="hero-overlay"></div>
 
-    <a href="tel:+17139419647" class="hero-btn">Call (713) 941-9647</a>
+    <div class="hero-content">
+        <h1 class="gold-gradient animate-fade">Luxury Black SUV Transportation</h1>
+        <p class="gold-gradient animate-fade">Houston & Surrounding Areas</p>
+
+        <a href="tel:+17139419647" class="hero-btn fade-in">Call (713) 941-9647</a>
+    </div>
 </section>
 
 
-<!-- ================= SERVICES ================= -->
-<section id="services" class="services">
-    <h2 class="gold-text">Our Services</h2>
+<!-- SERVICES -->
+<section id="services" class="services fade-in">
+    <h2 class="gold-gradient">Our Services</h2>
 
     <ul>
         <li>Airport Transfers (IAH & HOU)</li>
@@ -55,39 +53,48 @@
 </section>
 
 
-<!-- ================= FLEET ================= -->
-<section id="fleet" class="fleet">
-    <h2 class="gold-text">Our Fleet</h2>
-    <p>Luxury Black SUV • Premium Comfort • Professional Drivers</p>
+<!-- FLEET -->
+<section id="fleet" class="fleet fade-in">
+    <h2 class="gold-gradient">Our Fleet</h2>
+    <p class="gold-gradient">Luxury Black SUV • Premium Comfort • Professional Drivers</p>
 </section>
 
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="contact">
-    <h2 class="gold-text">Contact Us</h2>
+<!-- BOOK -->
+<section id="book" class="book fade-in">
+    <h2 class="gold-gradient">Book Your Ride</h2>
+    <a href="tel:+17139419647" class="hero-btn">Call Now</a>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact fade-in">
+    <h2 class="gold-gradient">Contact Us</h2>
     <p>Email: fjlimoservice@gmail.com</p>
     <p>Phone: (713) 941-9647</p>
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer>
     <p>© 2025 FJ Limo. All rights reserved.</p>
 </footer>
 
 
-<!-- ================= SCRIPTS ================= -->
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/17139419647" class="whatsapp" target="_blank">
+    💬
+</a>
+
+
+<!-- SMOOTH SCROLL SCRIPT -->
 <script>
-/* Toggle Menu (Mobile) */
 function toggleMenu() {
     document.getElementById("navMenu").classList.toggle("show");
 }
 
-/* Smooth Scroll WITHOUT # in URL */
 function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({
-        behavior: "smooth"
-    });
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 </script>
 
