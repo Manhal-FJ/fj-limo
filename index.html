@@ -6,74 +6,90 @@
     <title>FJ Limo - Luxury Black SUV Service</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    <script>
-function toggleMenu() {
-    document.getElementById("navMenu").classList.toggle("show");
-}
-</script>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
+<!-- ================= HEADER ================= -->
+<header class="header">
     <div class="header-container">
 
         <!-- LOGO -->
-        <div class="logo-container">
-            <img src="logo.jpg" alt="FJ Limo" class="logo">
-        </div>
+        <img src="logo.jpg" alt="FJ Limo Logo" class="logo">
 
         <!-- MOBILE MENU BUTTON -->
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-        <!-- NAVIGATION -->
+        <!-- NAV MENU -->
         <nav id="navMenu" class="nav">
-            <a href="#" class="nav-link">Home</a>
-            <a href="#" class="nav-link">Services</a>
-            <a href="#" class="nav-link">Fleet</a>
-            <a href="#" class="nav-link">Contact</a>
-            <a href="#" class="nav-link book-btn">Book Now</a>
+            <a onclick="scrollToSection('home')" class="nav-link">Home</a>
+            <a onclick="scrollToSection('services')" class="nav-link">Services</a>
+            <a onclick="scrollToSection('fleet')" class="nav-link">Fleet</a>
+            <a onclick="scrollToSection('contact')" class="nav-link">Contact</a>
+            <a onclick="scrollToSection('book')" class="nav-link book-btn">Book Now</a>
         </nav>
 
     </div>
 </header>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="hero">
-        <h1>Luxury Black SUV Transportation</h1>
-        <p class="gold-text">Luxury Black SUV Transportation Service</p>
-        <a href="tel:+17139419647" class="hero-btn">Call (713) 941-9647</a>
-    </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
+<!-- ================= HERO SECTION ================= -->
+<section id="home" class="hero">
+    <h1 class="gold-text">Luxury Black SUV Transportation</h1>
+    <p class="gold-text">Houston & Surrounding Areas</p>
 
-        <ul>
-            <li>Airport Transfers (IAH & HOU)</li>
-            <li>Corporate Travel</li>
-            <li>Private Chauffeur</li>
-            <li>Special Events</li>
-            <li>Hotel & Business Transfers</li>
-        </ul>
-    </section>
+    <a href="tel:+17139419647" class="hero-btn">Call (713) 941-9647</a>
+</section>
 
-    <!-- FLEET SECTION -->
-    <section id="fleet" class="fleet">
-        <h2>Our Fleet</h2>
-        <p>Luxury Black SUV • Premium Comfort • Professional Drivers</p>
-    </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: fjlimoservice@gmail.com</p>
-        <p>Phone: (713) 941-9647</p>
-    </section>
+<!-- ================= SERVICES ================= -->
+<section id="services" class="services">
+    <h2 class="gold-text">Our Services</h2>
 
-    <footer>
-        <p>© 2025 FJ Limo. All rights reserved.</p>
-    </footer>
+    <ul>
+        <li>Airport Transfers (IAH & HOU)</li>
+        <li>Corporate Travel</li>
+        <li>Private Chauffeur</li>
+        <li>Special Events</li>
+        <li>Hotel & Business Transfers</li>
+    </ul>
+</section>
+
+
+<!-- ================= FLEET ================= -->
+<section id="fleet" class="fleet">
+    <h2 class="gold-text">Our Fleet</h2>
+    <p>Luxury Black SUV • Premium Comfort • Professional Drivers</p>
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+    <h2 class="gold-text">Contact Us</h2>
+    <p>Email: fjlimoservice@gmail.com</p>
+    <p>Phone: (713) 941-9647</p>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2025 FJ Limo. All rights reserved.</p>
+</footer>
+
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+/* Toggle Menu (Mobile) */
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show");
+}
+
+/* Smooth Scroll WITHOUT # in URL */
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
+}
+</script>
 
 </body>
 </html>
