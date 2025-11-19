@@ -171,56 +171,54 @@
         </div>
     </section>
     <!-- BOOKING FORM -->
-<section id="online-booking" class="section section-dark fade-in">
-    <div class="container">
-        <h2 class="section-title gold-gradient">Online Booking Form</h2>
-        <p class="section-intro">
-            Fill out the form below, and our team will contact you to confirm your reservation.
-        </p>
+<form class="booking-form" 
+      action="https://formspree.io/f/mpwkvplp" 
+      method="POST" 
+      onsubmit="submitForm(event)">
 
-        <form class="booking-form" action="https://formspree.io/f/mpwkvplp" method="POST">
-            <input type="hidden" name="_subject" value="New Booking Request from FJ Limo">
-            <input type="hidden" name="_replyto">
-            <input type="hidden" name="_next" value="https://YOUR-WEBSITE-URL/success.html">
+    <input type="hidden" name="_subject" value="New Booking Request from FJ Limo">
+    <input type="hidden" name="_replyto">
 
-            <div class="form-row">
-                <label>Your Name</label>
-                <input type="text" name="name" placeholder="Enter your full name" required>
-            </div>
-
-            <div class="form-row">
-                <label>Phone Number</label>
-                <input type="tel" name="phone" placeholder="(713) 941-9647" required>
-            </div>
-
-            <div class="form-row">
-                <label>Pick-up Date</label>
-                <input type="date" name="date" required>
-            </div>
-
-            <div class="form-row">
-                <label>Pick-up Location</label>
-                <input type="text" name="pickup" placeholder="Pickup address" required>
-            </div>
-
-            <div class="form-row">
-                <label>Drop-off Location</label>
-                <input type="text" name="dropoff" placeholder="Destination address" required>
-            </div>
-
-            <div class="form-row">
-                <label>Additional Notes (Optional)</label>
-                <textarea name="notes" placeholder="Flight number, number of passengers, etc."></textarea>
-            </div>
-             <div class="form-row">
-                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-            </div>
-            <button type="submit" class="btn btn-primary large-btn" style="margin-top:20px;">
-                Submit Booking Request
-            </button>
-        </form>
+    <div class="form-row">
+        <label>Your Name</label>
+        <input type="text" name="name" required>
     </div>
-</section>
+
+    <div class="form-row">
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required>
+    </div>
+
+    <div class="form-row">
+        <label>Pick-up Date</label>
+        <input type="date" name="date" required>
+    </div>
+
+    <div class="form-row">
+        <label>Pick-up Location</label>
+        <input type="text" name="pickup" required>
+    </div>
+
+    <div class="form-row">
+        <label>Drop-off Location</label>
+        <input type="text" name="dropoff" required>
+    </div>
+
+    <div class="form-row">
+        <label>Additional Notes (Optional)</label>
+        <textarea name="notes"></textarea>
+    </div>
+
+    <!-- 👇 CAPTCHA (correct) 👇 -->
+    <div class="form-row">
+        <div class="g-recaptcha" data-sitekey="6LfgSREsAAAAAPCLoy68FAqv_SvkSdem7Xw4FfYA"></div>
+    </div>
+
+    <button type="submit" class="btn btn-primary large-btn" style="margin-top:20px;">
+        Submit Booking Request
+    </button>
+</form>
+
 
 
 
