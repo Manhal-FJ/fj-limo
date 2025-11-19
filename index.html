@@ -90,52 +90,58 @@
             <h2 class="section-title gold-gradient">Online Booking Form</h2>
             <p class="section-intro">Fill out the form below, and our team will contact you to confirm your reservation.</p>
 
-            <form class="booking-form" action="https://formspree.io/f/mpwkvplp" method="POST">
-                <input type="hidden" name="_subject" value="New Booking Request from FJ Limo">
-                <input type="hidden" name="_replyto">
+          <section id="online-booking" class="section section-dark fade-in">
+    <div class="container">
+        <h2 class="section-title gold-gradient">Online Booking Form</h2>
+        <p class="section-intro">
+            Fill out the form below, and our team will contact you to confirm your reservation.
+        </p>
 
-                <!-- REDIRECT AFTER SUBMIT ⬇ -->
-                <input type="hidden" name="_next" value="https://fjlimo.com/success.html">
+        <!-- NEW WORKING FORM -->
+        <form class="booking-form" 
+              action="https://formspree.io/f/mpwkvplp" 
+              method="POST">
 
-                <div class="form-row">
-                    <label>Your Name</label>
-                    <input type="text" name="name" required>
-                </div>
+            <input type="hidden" name="_subject" value="New Booking Request from FJ Limo">
+            <input type="hidden" name="_next" value="https://fjlimo.com/success.html">
 
-                <div class="form-row">
-                    <label>Phone Number</label>
-                    <input type="tel" name="phone" required>
-                </div>
+            <div class="form-row">
+                <label>Your Name</label>
+                <input type="text" name="name" required>
+            </div>
 
-                <div class="form-row">
-                    <label>Pick-up Date</label>
-                    <input type="date" name="date" required>
-                </div>
+            <div class="form-row">
+                <label>Phone Number</label>
+                <input type="tel" name="phone" required>
+            </div>
 
-                <div class="form-row">
-                    <label>Pick-up Location</label>
-                    <input type="text" name="pickup" required>
-                </div>
+            <div class="form-row">
+                <label>Pick-up Date</label>
+                <input type="date" name="date" required>
+            </div>
 
-                <div class="form-row">
-                    <label>Drop-off Location</label>
-                    <input type="text" name="dropoff" required>
-                </div>
+            <div class="form-row">
+                <label>Pick-up Location</label>
+                <input type="text" name="pickup" required>
+            </div>
 
-                <div class="form-row">
-                    <label>Additional Notes</label>
-                    <textarea name="notes"></textarea>
-                </div>
+            <div class="form-row">
+                <label>Drop-off Location</label>
+                <input type="text" name="dropoff" required>
+            </div>
 
-                <!-- reCAPTCHA ⬇ -->
-                <div class="form-row">
-                    <div class="g-recaptcha" data-sitekey="6LfgSREsAAAAAPCLoy68FAqv_SvkSdem7Xw4FfYA"></div>
-                </div>
+            <div class="form-row">
+                <label>Additional Notes</label>
+                <textarea name="notes"></textarea>
+            </div>
 
-                <button type="submit" class="btn btn-primary large-btn" style="margin-top:20px;">
-                    Submit Booking Request
-                </button>
-            </form>
+            <button type="submit" class="btn btn-primary large-btn" style="margin-top:20px;">
+                Submit Booking Request
+            </button>
+        </form>
+    </div>
+</section>
+  
         </div>
     </section>
 
@@ -150,7 +156,7 @@
 <a href="https://wa.me/17139419647" class="whatsapp" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 
 <!-- SCRIPTS -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 <script>
 function toggleMenu() {
     var nav = document.getElementById("navMenu");
